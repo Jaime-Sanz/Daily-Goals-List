@@ -1,3 +1,15 @@
-import '/src/style.css';
+export function closePanel() {
+    document.getElementById("folders-panel").style.width = "0%";
+    document.getElementById("goals-panel").style.width = "100%";
+    document.getElementById("three-lines").style.visibility = "visible";
+    document.getElementById("new-folder").style.visibility = "hidden";
+}
 
-console.log('Hello, webpack!');
+export function openPanel() {
+    document.getElementById("new-folder").style.visibility = "visible";
+    document.getElementById("folders-panel").style.width = "20%";
+    document.getElementById("goals-panel").style.width = "80%";
+    document.getElementById("three-lines").style.visibility = "hidden";
+    document.getElementById("new-folder").style.visibility = "visible";
+}
+
