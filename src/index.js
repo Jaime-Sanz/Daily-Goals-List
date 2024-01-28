@@ -1,3 +1,6 @@
+import { Folder } from "./folders";
+
+//Exported Functions
 export function closePanel() {
     document.getElementById("folders-panel").style.width = "0%";
     document.getElementById("goals-panel").style.width = "100%";
@@ -13,3 +16,15 @@ export function openPanel() {
     document.getElementById("new-folder").style.visibility = "visible";
 }
 
+export function showCreateScreen() {
+    let formVis = document.getElementById("create-form");
+    let folderForm = document.getElementById("create-folder");
+
+    if (formVis.style.visibility === "visible"){
+        formVis.style.visibility = "hidden";
+        folderForm.reset();
+       } else {
+        formVis.style.visibility = "visible";
+       }
+}
+//End of Exported Functions

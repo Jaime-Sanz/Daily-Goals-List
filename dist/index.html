@@ -5,10 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/src/style.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
   <title>Who Dares Wins!</title>
 </head>
 <body>
     <div id="content">
+        <div id="create-form">
+            <form id="create-folder">
+                <label for="folder-name">Folder Name:</label><br>
+                <input type="text" id="folder-name" placeholder="ex. Math Class" minlength="1" maxlength="15" required><br>
+                <label for="folder-description">Folder Description: </label><br>
+                <textarea id="folder-description" cols="5" rows="5" maxlength="255"></textarea><br>
+                <label for="folderPrio">Folder Priority:</label><br>
+                <select name="priorityList" id="folderPrio" required>
+                    <option value="High">High</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Low">Low</option><br>
+                <input type="submit" id="form-submit" value="Create Folder">
+            </form>
+            <button id="form-close-btn" onclick="lib.showCreateScreen()">Close</button>
+        </div>
         <div id="folders-panel">
             <div id="close-panel">
                 <h4>Who Dares Wins!</h4>
@@ -19,7 +37,7 @@
             </div>
             <div id="folderNames" class="folders"><span class="material-symbols-outlined">folder</span><h4 class="folder-h">Default</h4></div>
             <div id="createNew">
-                <button id="new-folder">Create<span class="material-symbols-outlined">folder</span></button>
+                <button id="new-folder" onclick="lib.showCreateScreen()">Create<span class="material-symbols-outlined">folder</span></button>
             </div>
         </div>
         <div id="goals-panel">

@@ -11,20 +11,51 @@ var lib;
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/folders.js":
+/*!************************!*\
+  !*** ./src/folders.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   Folder: () => (/* binding */ Folder)\n/* harmony export */ });\nclass Folder {\r\n    constructor(name, description, priority) {\r\n        this.name = name;\r\n        this.description = description || '';\r\n        this.priority = priority || '';\r\n        this.todos = [];\r\n    }\r\n\r\n    addTodo(title, description, dueDate, priority) {\r\n        const newTodo = { title, description, dueDate, priority };\r\n        this.todos.push(newTodo);\r\n        return newTodo;\r\n    }\r\n\r\n    deleteTodoByTitle(title) {\r\n        const index = this.todos.findIndex(todo => todo.title === title);\r\n        if (index !== -1) {\r\n          const deletedTodo = this.todos.splice(index, 1)[0];\r\n          return deletedTodo;\r\n        } else {\r\n          return null; \r\n        }\r\n    }\r\n}\r\n\n\n//# sourceURL=webpack://lib/./src/folders.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   closePanel: () => (/* binding */ closePanel),\n/* harmony export */   openPanel: () => (/* binding */ openPanel)\n/* harmony export */ });\nfunction closePanel() {\r\n    document.getElementById(\"folders-panel\").style.width = \"0%\";\r\n    document.getElementById(\"goals-panel\").style.width = \"100%\";\r\n    document.getElementById(\"three-lines\").style.visibility = \"visible\";\r\n    document.getElementById(\"new-folder\").style.visibility = \"hidden\";\r\n}\r\n\r\nfunction openPanel() {\r\n    document.getElementById(\"new-folder\").style.visibility = \"visible\";\r\n    document.getElementById(\"folders-panel\").style.width = \"20%\";\r\n    document.getElementById(\"goals-panel\").style.width = \"80%\";\r\n    document.getElementById(\"three-lines\").style.visibility = \"hidden\";\r\n    document.getElementById(\"new-folder\").style.visibility = \"visible\";\r\n}\r\n\r\n\n\n//# sourceURL=webpack://lib/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   closePanel: () => (/* binding */ closePanel),\n/* harmony export */   openPanel: () => (/* binding */ openPanel),\n/* harmony export */   showCreateScreen: () => (/* binding */ showCreateScreen)\n/* harmony export */ });\n/* harmony import */ var _folders__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./folders */ \"./src/folders.js\");\n\r\n\r\n//Exported Functions\r\nfunction closePanel() {\r\n    document.getElementById(\"folders-panel\").style.width = \"0%\";\r\n    document.getElementById(\"goals-panel\").style.width = \"100%\";\r\n    document.getElementById(\"three-lines\").style.visibility = \"visible\";\r\n    document.getElementById(\"new-folder\").style.visibility = \"hidden\";\r\n}\r\n\r\nfunction openPanel() {\r\n    document.getElementById(\"new-folder\").style.visibility = \"visible\";\r\n    document.getElementById(\"folders-panel\").style.width = \"20%\";\r\n    document.getElementById(\"goals-panel\").style.width = \"80%\";\r\n    document.getElementById(\"three-lines\").style.visibility = \"hidden\";\r\n    document.getElementById(\"new-folder\").style.visibility = \"visible\";\r\n}\r\n\r\nfunction showCreateScreen() {\r\n    let formVis = document.getElementById(\"create-form\");\r\n    let folderForm = document.getElementById(\"create-folder\");\r\n\r\n    if (formVis.style.visibility === \"visible\"){\r\n        formVis.style.visibility = \"hidden\";\r\n        folderForm.reset();\r\n       } else {\r\n        formVis.style.visibility = \"visible\";\r\n       }\r\n}\r\n//End of Exported Functions\r\n\n\n//# sourceURL=webpack://lib/./src/index.js?");
 
 /***/ })
 
 /******/ 	});
 /************************************************************************/
-/******/ 	// The require scope
-/******/ 	var __webpack_require__ = {};
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
@@ -60,8 +91,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = {};
-/******/ 	__webpack_modules__["./src/index.js"](0, __webpack_exports__, __webpack_require__);
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/index.js");
 /******/ 	lib = __webpack_exports__;
 /******/ 	
 /******/ })()
