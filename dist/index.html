@@ -17,7 +17,7 @@
                 <label for="folder-name">Folder Name:</label><br>
                 <input type="text" id="folder-name" placeholder="ex. Math Class" minlength="1" maxlength="15" required><br>
                 <label for="folder-description">Folder Description: </label><br>
-                <textarea id="folder-description" cols="5" rows="5" maxlength="255"></textarea><br>
+                <textarea id="folder-description" cols="5" rows="5" maxlength="60"></textarea><br>
                 <label for="folderPrio">Folder Priority:</label><br>
                 <select name="priorityList" id="folderPrio" required>
                     <option value="High">High</option>
@@ -35,7 +35,9 @@
             <div id="folders-tag">
                 <h5>FOLDERS</h5>
             </div>
-            <div id="folderNames" class="folders"><span class="material-symbols-outlined">folder</span><h4 class="folder-h">Default</h4></div>
+            <div id="folderHolder" class="folders">
+                <div><span class="material-symbols-outlined">folder</span><a href="#">Folder</a><a href="#" class="material-symbols-outlined">add</a><a href="#" class="material-symbols-outlined">delete</a></div>
+            </div>
             <div id="createNew">
                 <button id="new-folder" onclick="lib.showCreateScreen()">Create<span class="material-symbols-outlined">folder</span></button>
             </div>
