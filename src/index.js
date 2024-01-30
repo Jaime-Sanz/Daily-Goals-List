@@ -1,6 +1,8 @@
 import { Folder } from "./folders";
 
-//Exported Functions
+const folders = [];
+let selectedFolder = null;
+
 export function closePanel() {
     document.getElementById("folders-panel").style.width = "0%";
     document.getElementById("goals-panel").style.width = "100%";
@@ -20,12 +22,22 @@ export function showCreateScreen() {
     let formVis = document.getElementById("create-form");
     let folderForm = document.getElementById("create-folder");
 
-    if (formVis.style.visibility === "visible"){
+    if (formVis.style.visibility === "visible") {
         formVis.style.visibility = "hidden";
         folderForm.reset();
-       } else {
+    } else {
         formVis.style.visibility = "visible";
-       }
+    }
 }
-//End of Exported Functions
 
+export function showToDoScreen() {
+    let formVis = document.getElementById("todo-form");
+    let folderForm = document.getElementById("create-todo");
+
+    if (formVis.style.visibility === "visible") {
+        formVis.style.visibility = "hidden";
+        folderForm.reset();
+    } else {
+        formVis.style.visibility = "visible";
+    }
+}

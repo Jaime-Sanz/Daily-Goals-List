@@ -23,9 +23,28 @@
                     <option value="High">High</option>
                     <option value="Normal">Normal</option>
                     <option value="Low">Low</option><br>
+                </select>
                 <input type="submit" id="form-submit" value="Create Folder">
             </form>
             <button id="form-close-btn" onclick="lib.showCreateScreen()">Close</button>
+        </div>
+        <div id="todo-form">
+            <form id="create-todo">
+                <label for="todo-title">Title: </label><br>
+                <input type="text" id="todo-title" placeholder="ex. Study Comp Sci" minlength="1" maxlength="15" required><br>
+                <label for="todo-description">Description: </label><br>
+                <textarea id="todo-description" cols="5" rows="5" maxlength="60" required></textarea><br>
+                <label for="todo-date">Date: </label><br>
+                <input type="date" id="todo-date" required><br>
+                <label for="todo-prio">Priority: </label><br>
+                <select name="todoPrioList" id="todo-prio">
+                    <option value="High">High</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Low">Low</option><br>
+                </select>
+                <input type="submit" id="todo-form-submit" value="Create ToDo">
+            </form>
+            <button id="todo-close-btn" onclick="lib.showToDoScreen()">Close</button>
         </div>
         <div id="folders-panel">
             <div id="close-panel">
@@ -35,9 +54,7 @@
             <div id="folders-tag">
                 <h5>FOLDERS</h5>
             </div>
-            <div id="folderHolder" class="folders">
-                <div><span class="material-symbols-outlined">folder</span><a href="#">Folder</a><a href="#" class="material-symbols-outlined">add</a><a href="#" class="material-symbols-outlined">delete</a></div>
-            </div>
+            <div id="folderHolder" class="folders"></div>
             <div id="createNew">
                 <button id="new-folder" onclick="lib.showCreateScreen()">Create<span class="material-symbols-outlined">folder</span></button>
             </div>
@@ -45,7 +62,9 @@
         <div id="goals-panel">
             <div id="nav-panel">
                 <a href="#" onclick="lib.openPanel()"><img id="three-lines" src="/assets/images/three-lines-icon.png" alt="close button"></a>
-                <h1 id="folder-name">Folder Name</h1>
+                <h1 id="folder-name-panel">Current Folder</h1>
+            </div>
+            <div id="todo-container-panel">
             </div>
         </div>
     </div>
