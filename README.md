@@ -2,9 +2,9 @@
 Following `The Odin Project` the Todo List project.
 ## Preview
 | ![](assets/images/wdw-main.png) |
-| ![](assets/images/wdw-main-closed.png) |
-| ![](assets/images/wdw-dif-folder.png) |
-| ![](assets/images/wdw-description.png) |
+ ![](assets/images/wdw-main-closed.png) 
+ ![](assets/images/wdw-dif-folder.png) 
+ ![](assets/images/wdw-description.png) 
 |----|
 
 For those who would like to run the application and/or edit its source code on their local computer, follow the steps below:
