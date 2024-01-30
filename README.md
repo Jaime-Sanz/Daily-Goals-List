@@ -13,8 +13,8 @@ For those who would like to run the application and/or edit its source code on t
 2. Navigate to where the repository is saved on your local machine and open its index.html file on your preferred web browser.
 
 # Usage
-- Keep track of your everyday task to make sure your on the right track for success.
-- color coordinated folders and notes, red = High Priority, green = Normal Priority, Blue = Low Priority,
+- Keep track of your everyday tasks to make sure you are on the right track for success.
+- Color coordinated folders and notes, red = High Priority, green = Normal Priority, Blue = Low Priority,
 
 # Built Using
 > [![My Skills](https://skillicons.dev/icons?i=js,html,css,vscode,discord)](https://skillicons.dev)
