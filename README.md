@@ -17,7 +17,7 @@ For those who would like to run the application and/or edit its source code on t
 - Color coordinated folders and notes, red = High Priority, green = Normal Priority, Blue = Low Priority,
 
 # Built Using
-> [![My Skills](https://skillicons.dev/icons?i=js,html,css,vscode,discord)](https://skillicons.dev)
+> [![My Skills](https://skillicons.dev/icons?i=js,html,css,vscode,discord,webpack)](https://skillicons.dev)
 
 # Contributing
 Feel free to submit an issue should a bug be found using the application.
