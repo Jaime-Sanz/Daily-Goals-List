@@ -1,4 +1,5 @@
 import { Folder } from "./folders";
+import './src/style.css';
 
 const folders = [];
 let selectedFolder = null;
