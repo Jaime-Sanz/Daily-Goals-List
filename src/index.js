@@ -1,8 +1,4 @@
-import { Folder } from "./folders";
-import '../style.css';
-
-const folders = [];
-let selectedFolder = null;
+import '/src/style.css';
 
 export function closePanel() {
     document.getElementById("folders-panel").style.width = "0%";
